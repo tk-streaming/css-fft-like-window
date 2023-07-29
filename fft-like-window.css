@@ -21,18 +21,27 @@
     border: 0.25px solid var(--fft-like-window-edge-color);
     border-radius: 0.5px;
     box-shadow:
-    -1px -1px 0px var(--fft-like-window-shadow-color),
-    1px -1px 0px var(--fft-like-window-shadow-color),
-    -1px 1px 0px var(--fft-like-window-shadow-color),
-    1px 1px 0px var(--fft-like-window-shadow-color),
-    0px 0px 0px var(--fft-like-window-shadow-color),
-    -0.5px 1.5px 0px var(--fft-like-window-shadow-color),
-    0px 2.0px 0px var(--fft-like-window-shadow-color),
-    0.5px 2.5px 0px var(--fft-like-window-shadow-color),
-    1.5px -0.5px 0px var(--fft-like-window-shadow-color),
-    2.0px 0px 0px var(--fft-like-window-shadow-color),
-    2.5px 0.5px 0px var(--fft-like-window-shadow-color),
-    2.5px 2.5px 0px var(--fft-like-window-shadow-color);
+        -2px -2px 0px var(--fft-like-window-shadow-color),
+        2px -2px 0px var(--fft-like-window-shadow-color),
+        -2px 2px 0px var(--fft-like-window-shadow-color),
+        2px 2px 0px var(--fft-like-window-shadow-color),
+        0px 0px 0px var(--fft-like-window-shadow-color),
+
+        -1.5px 2.5px 0px var(--fft-like-window-shadow-color),
+        -1.0px 3.0px 0px var(--fft-like-window-shadow-color),
+        -0.5px 3.5px 0px var(--fft-like-window-shadow-color),
+        0.0px 4.0px 0px var(--fft-like-window-shadow-color),
+        0.5px 4.5px 0px var(--fft-like-window-shadow-color),
+        1.0px 5.0px 0px var(--fft-like-window-shadow-color),
+
+        2.5px -1.5px 0px var(--fft-like-window-shadow-color),
+        3.0px -1.0px 0px var(--fft-like-window-shadow-color),
+        3.5px -0.5px 0px var(--fft-like-window-shadow-color),
+        4.0px 0.0px 0px var(--fft-like-window-shadow-color),
+        4.5px 0.5px 0px var(--fft-like-window-shadow-color),
+        5.0px 1.0px 0px var(--fft-like-window-shadow-color),
+
+        5.0px 5.0px 0px var(--fft-like-window-shadow-color);
         
     font-family: var(--fft-like-window-text-font-family);
     color: var(--fft-like-window-text-font-color);
@@ -43,7 +52,6 @@
     line-height: 1.3em;
     font-size: medium;
 
-    margin-top: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -51,11 +59,6 @@
 
     display: inline-block;
     line-height: 1.3em;
-}
-
-.fft-like-window:has(.title) {
-    padding-top: 25px;
-    margin-top: 10px;
 }
 
 .fft-like-window .title {
@@ -66,16 +69,20 @@
         1px -1px 1px var(--fft-like-window-title-shadow-color),
         -1px -1px 1px var(--fft-like-window-title-shadow-color);
     font-family: var(--fft-like-window-title-font-family);
-    margin-top: -35px;
+    margin-top: -15px;
     margin-left: -10px;
     font-weight: 900;
+}
+
+.fft-like-window:has(.title) {
+    padding-top: -25px;
 }
 
 .fft-like-window .content {
     display: flex;
     flex-direction: row;
 }
-.fft-like-window .content.left-face {
+.fft-like-window .content.right-face {
     flex-direction: row-reverse;
 }
 
@@ -89,11 +96,12 @@
 .fft-like-window .content .dialogue {
     margin-left: 10px;
 }
-.fft-like-window .content.left-face .dialogue {
+.fft-like-window .content.right-face .dialogue {
+    margin-left: 0;
     margin-right: 0.5em;
 }
 
-.fft-like-window .content .dialogue .name {
+.fft-like-window .content .dialogue .speaker {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
