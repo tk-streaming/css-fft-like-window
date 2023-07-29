@@ -1,0 +1,108 @@
+
+:root {
+    --fft-like-window-text-font-family: '源暎ゴシックP', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fft-like-window-title-font-family: 'Footlight MT', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --fft-like-window-edge-color: rgb(196, 190, 170);
+    --fft-like-window-border-color: rgb(50, 40, 20);
+    --fft-like-window-shadow-color: rgb(50, 40, 20);
+    
+    --fft-like-window-text-font-color: rgb(50, 40, 20);
+    --fft-like-window-text-shadow-color: rgb(126, 120, 100);
+    
+    --fft-like-window-title-font-color: white;
+    --fft-like-window-title-shadow-color: rgb(16, 14, 7);
+
+    --fft-like-window-background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAQCAYAAAD9L+QYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHxSURBVDhPXdRtUxNRDAXg+7MdB0HwhYLMIDJYCxQKLbbAiD9x3Sf1LKsfMrmbm5xzkpvZdjc/6O5vPnTL24+d883lXjef7Xa3V+8rLvbz/rDbrI7Ky1stPg35D3ef67y43q9aptZ3GyeGhJeAxD3QALsTY85yAhhhPLwWQMlU/K8ksRAyhUzO7OJtdzXd+YckOU0A8OPDcbUOOJdjhfKuf7wrkBhQ8Rgy9WxQvl5OClzrgIHw4w5YSMWcE4OhO/XEqOMbUOABShFlSALsDoBcPl3J8/28PimBwUHU0kIAoyYkVGVEgCNEjGeAQirOnNv0/E09CpWZKeAUMYnMGZlZ5yFfnk4LeCyGEAT9g+73gOZMOcWYrZyHND+gRz34pG8XsHHpbpu3+bsEgPNWCMSaIklIFABcLQ6HGEA5SADPLnYqJkeMwjy6rpnvApcEEJhkQJQmDij3yCNALj8eZ0aKsLYl7QU44Gy9PK47HfCb1Zd+I04qVx3iKOYpzszrQdMecw6B7wAD8Y0QOJOz7eZ1z5lxsFL+8nQ2KGQBBzo9t0V+AZMizkP+evzab8lZEQIHas89rpHooraFCookjme5bfn1QcUuv5vv3tABQiBRyudxWVNAsQIgwJhufj9/qzlnPLy7rCNCu0999j4zn892uz8+xPYogYeZTAAAAABJRU5ErkJggg==);
+}
+
+.fft-like-window {
+    background-image: var(--fft-like-window-background-image);
+    border: 0.25px solid var(--fft-like-window-edge-color);
+    border-radius: 0.5px;
+    box-shadow:
+    -1px -1px 0px var(--fft-like-window-shadow-color),
+    1px -1px 0px var(--fft-like-window-shadow-color),
+    -1px 1px 0px var(--fft-like-window-shadow-color),
+    1px 1px 0px var(--fft-like-window-shadow-color),
+    0px 0px 0px var(--fft-like-window-shadow-color),
+    -0.5px 1.5px 0px var(--fft-like-window-shadow-color),
+    0px 2.0px 0px var(--fft-like-window-shadow-color),
+    0.5px 2.5px 0px var(--fft-like-window-shadow-color),
+    1.5px -0.5px 0px var(--fft-like-window-shadow-color),
+    2.0px 0px 0px var(--fft-like-window-shadow-color),
+    2.5px 0.5px 0px var(--fft-like-window-shadow-color),
+    2.5px 2.5px 0px var(--fft-like-window-shadow-color);
+        
+    font-family: var(--fft-like-window-text-font-family);
+    color: var(--fft-like-window-text-font-color);
+    text-shadow:
+        var(--fft-like-window-text-shadow-color) 0.5px 0.5px 0px,
+        var(--fft-like-window-text-shadow-color) 1px 1px 0px;
+    font-weight: 600;
+    line-height: 1.3em;
+    font-size: medium;
+
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: inline-block;
+    line-height: 1.3em;
+}
+
+.fft-like-window:has(.title) {
+    padding-top: 25px;
+    margin-top: 10px;
+}
+
+.fft-like-window .title {
+    color: white;
+    text-shadow:
+        1px 1px 1px var(--fft-like-window-title-shadow-color),
+        -1px 1px 1px var(--fft-like-window-title-shadow-color),
+        1px -1px 1px var(--fft-like-window-title-shadow-color),
+        -1px -1px 1px var(--fft-like-window-title-shadow-color);
+    font-family: var(--fft-like-window-title-font-family);
+    margin-top: -35px;
+    margin-left: -10px;
+    font-weight: 900;
+}
+
+.fft-like-window .content {
+    display: flex;
+    flex-direction: row;
+}
+.fft-like-window .content.left-face {
+    flex-direction: row-reverse;
+}
+
+.fft-like-window .content .face {
+    margin: 0;
+    padding: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.fft-like-window .content .dialogue {
+    margin-left: 10px;
+}
+.fft-like-window .content.left-face .dialogue {
+    margin-right: 0.5em;
+}
+
+.fft-like-window .content .dialogue .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.fft-like-window .content .dialogue .remark {
+    margin-left: 0.5em;
+    white-space: break-spaces;
+}
+.fft-like-window .content .dialogue .remark::before {
+    content: "「";
+    margin-left: -0.5em;
+}
